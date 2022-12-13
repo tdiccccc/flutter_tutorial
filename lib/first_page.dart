@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:helloworld/second_page.dart';
 
 class FirstPage extends StatelessWidget {
   @override
@@ -6,14 +8,21 @@ class FirstPage extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('aaa'),
+        title: const Text('ファースト'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: (){
             // ボタン押した時に呼ばれるコードを書く
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SecondPage(),
+                fullscreenDialog: true,
+              ),
+            );
           },
-          child: Text('ボタン'),
+          child: const Text('ボタン'),
         ),
       ),
     );

@@ -16,6 +16,10 @@ class FirstPage extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
+              Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+              // const Image(
+              //   image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+              // )
               TextField(
                 onChanged: (text) {
                   nameText = text;
